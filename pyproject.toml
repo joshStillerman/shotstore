@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shotstore"
+version = "0.1.0"
+description = "S3-based shot archive downloader with sync and async APIs"
+authors = [
+    { name = "Josh Stillerman" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "boto3>=1.28",
+]
+
+[project.optional-dependencies]
+async = ["aioboto3>=12.0"]
+
+[tool.setuptools]
+packages = ["shotstore"]
